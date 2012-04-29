@@ -1,0 +1,38 @@
+#======================= Global Settings =====================================
+
+[global]
+
+  bind interfaces only = <%= bind_interfaces_only %>
+  dns proxy            = <%= dns_proxy %>
+  encrypt passwords    = <%= encrypt_passwords %>
+  host msdfs           = <%= host_msdfs %>
+  hosts allow          = <%= hosts_allow %>
+  idmap gid            = <%= idmap_gid %>
+  idmap uid            = <%= idmap_uid %>
+  interfaces           = <%= interfaces %>
+  load printers        = <%= load_printers %>
+  local master         = <%= local_master %>
+  log file             = <%= log_file %>
+  log level            = <%= log_level %>
+  max log size         = <%= max_log_size %>
+  netbios name         = <%= netbios_name %>
+  password server      = <%= password_server %>
+  realm                = <%= realm %>
+  remote announce      = <% remote_announce.each do |val| -%>
+<%= val -%>
+<% end %>
+  security             = <%= security %>
+  server string        = <%= server_string %>
+  socket options       = <% socket_options.each do |val| -%>
+<%= val -%>
+<% end %>
+  syslog               = <%= syslog %>
+  unix extensions      = <%= unix_extensions %>
+  wide links           = <%= wide_links %>
+  wins server          = <%= wins_server %>
+  wins server          = <% wins_server.each do |val| -%>
+<%= val -%>
+<% end %>
+  workgroup            = <%= workgroup %>
+
+
