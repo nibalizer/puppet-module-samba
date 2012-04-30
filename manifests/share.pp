@@ -12,7 +12,7 @@ define samba::share(
   $directory_mask,
   $inherit_acls,
   $inherit_permissions,
-  $acl_check permissions,
+  $acl_check_permissions,
   $vfs_objects,
   $nfs4_mode,
   $nfs4_acedup,
@@ -23,11 +23,11 @@ define samba::share(
 ) {
   include samba
 
-  if ! ($osfamily in ['Debian']) {
-    fail("pam::access does not support osfamily $osfamily")
+  if ! ($::osfamily in ['Debian']) {
+    fail("pam::access does not support osfamily ${::osfamily}")
   }
 
-  realize Concat["$smb_conf_filename"]
+  realize Concat[$smb_conf_filename]
 
   concat::fragment { $name:
     ensure  => $ensure,

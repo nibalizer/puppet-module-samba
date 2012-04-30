@@ -30,13 +30,13 @@ define samba::global(
 ) {
   include samba
 
-  if ! ($osfamily in ['Debian']) {
-    fail("samba::global does not support osfamily $osfamily")
+  if ! ($::osfamily in ['Debian']) {
+    fail("samba::global does not support osfamily ${::osfamily}")
   }
 
-  realize Concat["$smb_conf_filename"]
+  realize Concat[$smb_conf_filename]
 
-  concat::fragment { "global":
+  concat::fragment { 'global':
     ensure  => $ensure,
     target  => $smb_conf_filename,
     content => template('samba/global.erb'),

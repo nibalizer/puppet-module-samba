@@ -3,7 +3,7 @@ class samba(
 ) {
   include concat::setup
 
-  @concat { "$smb_conf_filename":
+  @concat { $smb_conf_filename:
     owner  => 'root',
     group  => 'root',
     mode   => '0644',

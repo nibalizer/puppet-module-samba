@@ -10,11 +10,11 @@ define samba::dfsroot(
 ) {
   include samba
 
-  if ! ($osfamily in ['Debian']) {
-    fail("pam::access does not support osfamily $osfamily")
+  if ! ($::osfamily in ['Debian']) {
+    fail("samba::dfsroot does not support osfamily ${::osfamily}")
   }
 
-  realize Concat["$smb_conf_filename"]
+  realize Concat[$smb_conf_filename]
 
   concat::fragment { $name:
     ensure  => $ensure,
