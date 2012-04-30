@@ -1,38 +1,81 @@
+#This file managed by puppet. Edit at your own peril.
 #======================= Global Settings =====================================
 
 [global]
-
+<% if bind_interfaces_only != "NONE" %>
   bind interfaces only = <%= bind_interfaces_only %>
+<% end -%>
+<% if dns_proxy != "NONE" -%>
   dns proxy            = <%= dns_proxy %>
+<% end -%>
+<% if encrypt_passwords != "NONE" -%>
   encrypt passwords    = <%= encrypt_passwords %>
+<% end -%>
+<% if host_msdfs != "NONE" -%>
   host msdfs           = <%= host_msdfs %>
+<% end -%>
+<% if hosts_allow != "NONE" -%>
   hosts allow          = <%= hosts_allow %>
+<% end -%>
+<% if idmap_gid != "NONE" -%>
   idmap gid            = <%= idmap_gid %>
+<% end -%>
+<% if idmap_uid != "NONE" -%>
   idmap uid            = <%= idmap_uid %>
+<% end -%>
+<% if interfaces != "NONE" -%>
   interfaces           = <%= interfaces %>
+<% end -%>
+<% if load_printers != "NONE" -%>
   load printers        = <%= load_printers %>
+<% end -%>
+<% if local_master != "NONE" -%>
   local master         = <%= local_master %>
+<% end -%>
+<% if log_file != "NONE" -%>
   log file             = <%= log_file %>
+<% end -%>
+<% if log_level != "NONE" -%>
   log level            = <%= log_level %>
+<% end -%>
+<% if max_log_size != "NONE" -%>
   max log size         = <%= max_log_size %>
+<% end -%>
+<% if netbios_name != "NONE" -%>
   netbios name         = <%= netbios_name %>
+<% end -%>
+<% if password_server != "NONE" -%>
   password server      = <%= password_server %>
+<% end -%>
+<% if realm != "NONE" -%>
   realm                = <%= realm %>
-  remote announce      = <% remote_announce.each do |val| -%>
-<%= val -%>
-<% end %>
+<% end -%>
+<% if remote_announce != "NONE" -%>
+  remote announce      = <%= [remote_announce].flatten.join(" ") %>
+<% end -%>
+<% if security != "NONE" -%>
   security             = <%= security %>
+<% end -%>
+<% if server_string != "NONE" -%>
   server string        = <%= server_string %>
-  socket options       = <% socket_options.each do |val| -%>
-<%= val -%>
-<% end %>
+<% end -%>
+<% if socket_options != "NONE" -%>
+  socket options       = <%= [socket_options].flatten.join(" ")  %>
+<% end -%>
+<% if syslog != "NONE" -%>
   syslog               = <%= syslog %>
+<% end -%>
+<% if unix_extensions != "NONE" -%>
   unix extensions      = <%= unix_extensions %>
+<% end -%>
+<% if wide_links != "NONE" -%>
   wide links           = <%= wide_links %>
-  wins server          = <%= wins_server %>
-  wins server          = <% wins_server.each do |val| -%>
-<%= val -%>
-<% end %>
+<% end -%>
+<% if wins_server != "NONE" -%>
+  wins server          = <%= [wins_server].flatten.join(" ") %>
+<% end -%>
+<% if workgroup != "NONE" -%>
   workgroup            = <%= workgroup %>
+<% end -%>
 
 
