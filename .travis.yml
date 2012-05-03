@@ -1,0 +1,8 @@
+
+rvm: 1.8.7
+notifications:
+  email:
+    - krum.spencer@gmail.com
+env:
+  - PUPPET_VERSION=2.6.16
+  - PUPPET_VERSION=2.7.14
