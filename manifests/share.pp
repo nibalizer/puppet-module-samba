@@ -1,22 +1,22 @@
 define samba::share(
-  $msdfs_root,
-  $msdfs_proxy,
-  $comment,
-  $path,
-  $writeable,
-  $force_create_mode,
-  $force_directory_mode,
-  $force_group,
-  $public,
-  $create_mask,
-  $directory_mask,
-  $inherit_acls,
-  $inherit_permissions,
-  $acl_check_permissions,
-  $vfs_objects,
-  $nfs4_mode,
-  $nfs4_acedup,
-  $nfs4_chown,
+  $msdfs_root             = 'NONE',
+  $msdfs_proxy            = 'NONE',
+  $comment                = 'NONE',
+  $path                   = 'NONE',
+  $writeable              = 'NONE',
+  $force_create_mode      = 'NONE',
+  $force_directory_mode   = 'NONE',
+  $force_group            = 'NONE',
+  $public                 = 'NONE',
+  $create_mask            = 'NONE',
+  $directory_mask         = 'NONE',
+  $inherit_acls           = 'NONE',
+  $inherit_permissions    = 'NONE',
+  $acl_check_permissions  = 'NONE',
+  $vfs_objects            = 'NONE',
+  $nfs4_mode              = 'NONE',
+  $nfs4_acedup            = 'NONE',
+  $nfs4_chown             = 'NONE',
   $smb_conf_filename      = '/etc/samba/smb.conf',
   $ensure                 = present,
   $priority               = '20'
@@ -24,7 +24,7 @@ define samba::share(
   include samba
 
   if ! ($::osfamily in ['Debian']) {
-    fail("pam::access does not support osfamily ${::osfamily}")
+    fail("samba::share does not support osfamily ${::osfamily}")
   }
 
   realize Concat[$smb_conf_filename]

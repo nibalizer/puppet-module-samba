@@ -1,9 +1,9 @@
 define samba::dfsroot(
-  $msdfs_root           = 'yes',
-  $msdfs_proxy          = '',
-  $comment              = 'default comment',
-  $path                 = '/var/samba/dfsname',
-  $public               = 'no',
+  $msdfs_root           = 'NONE',
+  $msdfs_proxy          = 'NONE',
+  $comment              = 'NONE',
+  $path                 = 'NONE',
+  $public               = 'NONE',
   $smb_conf_filename    = '/etc/samba/smb.conf',
   $ensure               = present,
   $priority             = '20'
