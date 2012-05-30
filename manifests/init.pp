@@ -3,6 +3,10 @@ class samba(
 ) {
   include concat::setup
 
+  package { 'samba':
+    ensure => latest,
+  }
+
   @concat { $smb_conf_filename:
     owner  => 'root',
     group  => 'root',
