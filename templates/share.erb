@@ -9,7 +9,10 @@
   comment                = <%= comment %>
 <% end -%>
 <% if path != "NONE" -%>
-  writaeable             = <%= writeable %>
+  path                   = <%= path %>
+<% end -%>
+<% if writeable != "NONE" -%>
+  writeable              = <%= writeable %>
 <% end -%>
 <% if force_create_mode != "NONE" -%>
   force create mode      = <%= force_create_mode %>
@@ -50,3 +53,4 @@
 <% if nfs4_chown != "NONE" -%>
   nfs4:chwon              = <%= nfs4_chown %>
 <% end -%>
+
