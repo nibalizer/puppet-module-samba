@@ -23,6 +23,7 @@ define samba::global(
   $unix_extensions      = 'NONE',
   $wide_links           = 'NONE',
   $wins_server          = 'NONE',
+  $panic_action         = 'NONE',
   $workgroup            = 'NONE',
   $smb_conf_filename    = '/etc/samba/smb.conf',
   $ensure               = present,
@@ -36,7 +37,7 @@ define samba::global(
 
   realize Concat[$smb_conf_filename]
 
-  concat::fragment { 'global':
+  concat::fragment { '$name':
     ensure  => $ensure,
     target  => $smb_conf_filename,
     content => template('samba/global.erb'),

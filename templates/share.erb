@@ -1,4 +1,7 @@
 [<%= name %>]
+<% if browseable != "NONE" -%>
+  browseable             = <%= browseable %>
+<% end -%>
 <% if msdfs_root != "NONE" %>
   msdfs root             = <%= msdfs_root %>
 <% end -%>
@@ -51,6 +54,6 @@
   nfs4:acedup             = <%= nfs4_acedup %>
 <% end -%>
 <% if nfs4_chown != "NONE" -%>
-  nfs4:chwon              = <%= nfs4_chown %>
+  nfs4:chown              = <%= nfs4_chown %>
 <% end -%>
 

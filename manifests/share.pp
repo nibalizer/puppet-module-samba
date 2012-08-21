@@ -1,6 +1,7 @@
 define samba::share(
   $msdfs_root             = 'NONE',
   $msdfs_proxy            = 'NONE',
+  $browseable             = 'NONE',
   $comment                = 'NONE',
   $path                   = 'NONE',
   $writeable              = 'NONE',
@@ -17,6 +18,7 @@ define samba::share(
   $nfs4_mode              = 'NONE',
   $nfs4_acedup            = 'NONE',
   $nfs4_chown             = 'NONE',
+  $force_create_mode      = 'NONE',
   $smb_conf_filename      = '/etc/samba/smb.conf',
   $ensure                 = present,
   $priority               = '20'
