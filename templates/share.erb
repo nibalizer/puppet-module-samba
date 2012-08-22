@@ -39,21 +39,30 @@
   inherit acls           = <%= inherit_permissions %>
 <% end -%>
 <% if inherit_permissions != "NONE" -%>
-  inherit permissions     = <%= directory_mask %>
+  inherit permissions    = <%= directory_mask %>
 <% end -%>
 <% if acl_check_permissions != "NONE" -%>
-  acl check permissions   = <%= acl check permissions %>
+  acl check permissions  = <%= acl check permissions %>
 <% end -%>
 <% if vfs_objects != "NONE" -%>
-  vfs objects             = <%= vfs_objects %>
+  vfs objects            = <%= vfs_objects %>
 <% end -%>
 <% if nfs4_mode != "NONE" -%>
-  nfs4:mode               = <%= nfs4_mode  %>
+  nfs4:mode              = <%= nfs4_mode  %>
 <% end -%>
 <% if nfs4_acedup != "NONE" -%>
-  nfs4:acedup             = <%= nfs4_acedup %>
+  nfs4:acedup            = <%= nfs4_acedup %>
 <% end -%>
 <% if nfs4_chown != "NONE" -%>
-  nfs4:chown              = <%= nfs4_chown %>
+  nfs4:chown             = <%= nfs4_chown %>
+<% end -%>
+<% if guest_ok != "NONE" -%>
+  guest ok               = <%= guest_ok %>
+<% end -%>
+<% if guest_only != "NONE" -%>
+  guest only             = <%= guest_only %>
+<% end -%>
+<% if force_user != "NONE" -%>
+  force user             = <%= force_user %>
 <% end -%>
 
