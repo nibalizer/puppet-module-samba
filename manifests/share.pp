@@ -22,21 +22,20 @@ define samba::share(
   $path                   = 'NONE',
   $priority               = '20',
   $public                 = 'NONE',
-  $smb_conf_filename      = '/etc/samba/smb.conf',
   $vfs_objects            = 'NONE',
   $writeable              = 'NONE'
 ) {
   include samba
 
-  if ! ($::osfamily in ['Debian']) {
+  if ! ($::osfamily in ['Debian', 'Solaris']) {
     fail("samba::share does not support osfamily ${::osfamily}")
   }
 
-  realize Concat[$smb_conf_filename]
+  realize Concat[$samba::params::smb_conf_filename]
 
   concat::fragment { $name:
     ensure  => $ensure,
-    target  => $smb_conf_filename,
+    target  => $samba::params::smb_conf_filename,
     content => template('samba/share.erb'),
     order   => $priority,
   }

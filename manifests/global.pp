@@ -26,21 +26,20 @@ define samba::global(
   $wide_links           = 'NONE',
   $wins_server          = 'NONE',
   $workgroup            = 'NONE',
-  $smb_conf_filename    = '/etc/samba/smb.conf',
   $ensure               = present,
   $priority             = '1',
 ) {
   include samba
 
-  if ! ($::osfamily in ['Debian']) {
+  if ! ($::osfamily in ['Debian', 'Solaris']) {
     fail("samba::global does not support osfamily ${::osfamily}")
   }
 
-  realize Concat[$smb_conf_filename]
+  realize Concat[$samba::params::smb_conf_filename]
 
   concat::fragment { '$name':
     ensure  => $ensure,
-    target  => $smb_conf_filename,
+    target  => $samba::params::smb_conf_filename,
     content => template('samba/global.erb'),
     order   => $priority,
   }

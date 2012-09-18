@@ -1,11 +1,16 @@
 class samba(
-  $smb_conf_filename    = '/etc/samba/smb.conf',
-) {
+  $smb_conf_filename    = $samba::params::smb_conf_filename,
+) inherits samba::params {
   include concat::setup
   include samba::params
 
-  package { 'samba':
-    ensure => latest,
+  package { $samba::parmas::smbpackage:
+    name     => $samba::params::smbpackage,
+    ensure   => latest,
+    provider => $osfamily ? {
+      'Solaris' => pkgutil,
+      default   => undef,
+    }
   }
 
   service {$samba::params::smbservice:

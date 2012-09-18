@@ -42,7 +42,7 @@
   inherit permissions    = <%= directory_mask %>
 <% end -%>
 <% if acl_check_permissions != "NONE" -%>
-  acl check permissions  = <%= acl check permissions %>
+  acl check permissions  = <%= acl_check_permissions %>
 <% end -%>
 <% if vfs_objects != "NONE" -%>
   vfs objects            = <%= vfs_objects %>
