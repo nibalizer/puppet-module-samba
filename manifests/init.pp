@@ -4,7 +4,7 @@ class samba(
   include concat::setup
   include samba::params
 
-  package { $samba::parmas::smbpackage:
+  package { $samba::params::smbpackage:
     name     => $samba::params::smbpackage,
     ensure   => latest,
     provider => $osfamily ? {
