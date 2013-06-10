@@ -1,17 +1,17 @@
-[<%= name %>]
+[<%= @name %>]
 <% if msdfs_root != "NONE" %>
-  msdfs root  = <%= msdfs_root %>
+  msdfs root  = <%= @msdfs_root %>
 <% end -%>
-<% if msdfs_proxy != "NONE" %>
-  msdfs proxy = <%= msdfs_proxy %>
+<% if @msdfs_proxy != "NONE" %>
+  msdfs proxy = <%= @msdfs_proxy %>
 <% end -%>
-<% if comment != "NONE" %>
-  comment     = <%= comment %>
+<% if @comment != "NONE" %>
+  comment     = <%= @comment %>
 <% end -%>
-<% if path != "NONE" %>
-  path        = <%= path %>
+<% if @path != "NONE" %>
+  path        = <%= @path %>
 <% end -%>
-<% if public != "NONE" %>
-  public      = <%= public %>
+<% if @public != "NONE" %>
+  public      = <%= @public %>
 <% end -%>
 
