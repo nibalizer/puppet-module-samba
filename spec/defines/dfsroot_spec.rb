@@ -18,6 +18,6 @@ describe 'samba::dfsroot', :type => :define do
   it { should contain_concat__fragment('testing').with(
       'ensure' => 'present',
       'target' => '/etc/samba/smb.conf',
-      'order'  => '20',
+      'order'  => '20'
   )}
 end
