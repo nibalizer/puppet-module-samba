@@ -7,4 +7,4 @@ license 'Apache 2'
 project_page 'https://github.com/pdxcat/puppet-module-samba'
 
 ## Add dependencies, if any:
-dependency 'ripienaar/concat', '>= 0.2.0'
+dependency 'puppetlabs/puppetlabs-concat', '>= 1.0.0'
