@@ -1,68 +1,68 @@
 [<%= name %>]
-<% if browseable != "NONE" -%>
-  browseable             = <%= browseable %>
+<% if @browseable != "NONE" -%>
+  browseable             = <%= @browseable %>
 <% end -%>
-<% if msdfs_root != "NONE" %>
-  msdfs root             = <%= msdfs_root %>
+<% if @msdfs_root != "NONE" %>
+  msdfs root             = <%= @msdfs_root %>
 <% end -%>
-<% if msdfs_proxy != "NONE" -%>
-  msdfs proxy            = <%= msdfs_proxy %>
+<% if @msdfs_proxy != "NONE" -%>
+  msdfs proxy            = <%= @msdfs_proxy %>
 <% end -%>
-<% if comment != "NONE" -%>
-  comment                = <%= comment %>
+<% if @comment != "NONE" -%>
+  comment                = <%= @comment %>
 <% end -%>
-<% if path != "NONE" -%>
-  path                   = <%= path %>
+<% if @path != "NONE" -%>
+  path                   = <%= @path %>
 <% end -%>
-<% if writeable != "NONE" -%>
-  writeable              = <%= writeable %>
+<% if @writeable != "NONE" -%>
+  writeable              = <%= @writeable %>
 <% end -%>
-<% if force_create_mode != "NONE" -%>
-  force create mode      = <%= force_create_mode %>
+<% if @force_create_mode != "NONE" -%>
+  force create mode      = <%= @force_create_mode %>
 <% end -%>
-<% if force_directory_mode != "NONE" -%>
-  force directory mode   = <%= force_directory_mode %>
+<% if @force_directory_mode != "NONE" -%>
+  force directory mode   = <%= @force_directory_mode %>
 <% end -%>
-<% if force_group != "NONE" -%>
-  force group            = <%= force_group %>
+<% if @force_group != "NONE" -%>
+  force group            = <%= @force_group %>
 <% end -%>
-<% if public != "NONE" -%>
-  public                 = <%= public %>
+<% if @public != "NONE" -%>
+  public                 = <%= @public %>
 <% end -%>
-<% if create_mask != "NONE" -%>
-  create mask            = <%= create_mask %>
+<% if @create_mask != "NONE" -%>
+  create mask            = <%= @create_mask %>
 <% end -%>
-<% if directory_mask != "NONE" -%>
-  directory mask         = <%= directory_mask %>
+<% if @directory_mask != "NONE" -%>
+  directory mask         = <%= @directory_mask %>
 <% end -%>
-<% if inherit_acls != "NONE" -%>
-  inherit acls           = <%= inherit_permissions %>
+<% if @inherit_acls != "NONE" -%>
+  inherit acls           = <%= @inherit_permissions %>
 <% end -%>
-<% if inherit_permissions != "NONE" -%>
-  inherit permissions    = <%= directory_mask %>
+<% if @inherit_permissions != "NONE" -%>
+  inherit permissions    = <%= @directory_mask %>
 <% end -%>
-<% if acl_check_permissions != "NONE" -%>
-  acl check permissions  = <%= acl_check_permissions %>
+<% if @acl_check_permissions != "NONE" -%>
+  acl check permissions  = <%= @acl_check_permissions %>
 <% end -%>
-<% if vfs_objects != "NONE" -%>
-  vfs objects            = <%= vfs_objects %>
+<% if @vfs_objects != "NONE" -%>
+  vfs objects            = <%= @vfs_objects %>
 <% end -%>
-<% if nfs4_mode != "NONE" -%>
-  nfs4:mode              = <%= nfs4_mode  %>
+<% if @nfs4_mode != "NONE" -%>
+  nfs4:mode              = <%= @nfs4_mode  %>
 <% end -%>
-<% if nfs4_acedup != "NONE" -%>
-  nfs4:acedup            = <%= nfs4_acedup %>
+<% if @nfs4_acedup != "NONE" -%>
+  nfs4:acedup            = <%= @nfs4_acedup %>
 <% end -%>
-<% if nfs4_chown != "NONE" -%>
-  nfs4:chown             = <%= nfs4_chown %>
+<% if @nfs4_chown != "NONE" -%>
+  nfs4:chown             = <%= @nfs4_chown %>
 <% end -%>
-<% if guest_ok != "NONE" -%>
-  guest ok               = <%= guest_ok %>
+<% if @guest_ok != "NONE" -%>
+  guest ok               = <%= @guest_ok %>
 <% end -%>
-<% if guest_only != "NONE" -%>
-  guest only             = <%= guest_only %>
+<% if @guest_only != "NONE" -%>
+  guest only             = <%= @guest_only %>
 <% end -%>
-<% if force_user != "NONE" -%>
-  force user             = <%= force_user %>
+<% if @force_user != "NONE" -%>
+  force user             = <%= @force_user %>
 <% end -%>
 

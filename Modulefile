@@ -1,8 +1,10 @@
 name 'puppet-module-samba'
-version '0.0.2'
+version '0.0.4'
 author 'Spencer Krum'
 summary 'Configure samba global paramaters and shares'
-description 'Configure global samba::global{"global": dns_proxy => '7.7.7.7';}
+description 'Manage samba global configuration and shares as individual resources'
 license 'Apache 2'
-project_page 'github.com/nibalizer/puppet-module-samba'
-dependency 'ripienaar/puppet-concat', '9490fcf0e6c6a0b871e4ca0d93fc8bdf827059ae'
+project_page 'https://github.com/pdxcat/puppet-module-samba'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/puppetlabs-concat', '>= 1.0.0'

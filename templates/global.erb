@@ -2,86 +2,86 @@
 #======================= Global Settings =====================================
 
 [global]
-<% if bind_interfaces_only != "NONE" %>
-  bind interfaces only = <%= bind_interfaces_only %>
+<% if @bind_interfaces_only != "NONE" %>
+  bind interfaces only = <%= @bind_interfaces_only %>
 <% end -%>
-<% if dns_proxy != "NONE" -%>
-  dns proxy            = <%= dns_proxy %>
+<% if @dns_proxy != "NONE" -%>
+  dns proxy            = <%= @dns_proxy %>
 <% end -%>
-<% if encrypt_passwords != "NONE" -%>
-  encrypt passwords    = <%= encrypt_passwords %>
+<% if @encrypt_passwords != "NONE" -%>
+  encrypt passwords    = <%= @encrypt_passwords %>
 <% end -%>
-<% if host_msdfs != "NONE" -%>
-  host msdfs           = <%= host_msdfs %>
+<% if @host_msdfs != "NONE" -%>
+  host msdfs           = <%= @host_msdfs %>
 <% end -%>
-<% if hosts_allow != "NONE" -%>
-  hosts allow          = <%= hosts_allow %>
+<% if @hosts_allow != "NONE" -%>
+  hosts allow          = <%= @hosts_allow %>
 <% end -%>
-<% if idmap_gid != "NONE" -%>
-  idmap gid            = <%= idmap_gid %>
+<% if @idmap_gid != "NONE" -%>
+  idmap gid            = <%= @idmap_gid %>
 <% end -%>
-<% if idmap_uid != "NONE" -%>
-  idmap uid            = <%= idmap_uid %>
+<% if @idmap_uid != "NONE" -%>
+  idmap uid            = <%= @idmap_uid %>
 <% end -%>
-<% if interfaces != "NONE" -%>
-  interfaces           = <%= interfaces %>
+<% if @interfaces != "NONE" -%>
+  interfaces           = <%= @interfaces %>
 <% end -%>
-<% if load_printers != "NONE" -%>
-  load printers        = <%= load_printers %>
+<% if @load_printers != "NONE" -%>
+  load printers        = <%= @load_printers %>
 <% end -%>
-<% if local_master != "NONE" -%>
-  local master         = <%= local_master %>
+<% if @local_master != "NONE" -%>
+  local master         = <%= @local_master %>
 <% end -%>
-<% if log_file != "NONE" -%>
-  log file             = <%= log_file %>
+<% if @log_file != "NONE" -%>
+  log file             = <%= @log_file %>
 <% end -%>
-<% if log_level != "NONE" -%>
-  log level            = <%= log_level %>
+<% if @log_level != "NONE" -%>
+  log level            = <%= @log_level %>
 <% end -%>
-<% if max_log_size != "NONE" -%>
-  max log size         = <%= max_log_size %>
+<% if @max_log_size != "NONE" -%>
+  max log size         = <%= @max_log_size %>
 <% end -%>
-<% if netbios_name != "NONE" -%>
-  netbios name         = <%= netbios_name %>
+<% if @netbios_name != "NONE" -%>
+  netbios name         = <%= @netbios_name %>
 <% end -%>
-<% if password_server != "NONE" -%>
-  password server      = <%= password_server %>
+<% if @password_server != "NONE" -%>
+  password server      = <%= @password_server %>
 <% end -%>
-<% if realm != "NONE" -%>
-  realm                = <%= realm %>
+<% if @realm != "NONE" -%>
+  realm                = <%= @realm %>
 <% end -%>
-<% if remote_announce != "NONE" -%>
-  remote announce      = <%= [remote_announce].flatten.join(" ") %>
+<% if @remote_announce != "NONE" -%>
+  remote announce      = <%= [@remote_announce].flatten.join(" ") %>
 <% end -%>
-<% if security != "NONE" -%>
-  security             = <%= security %>
+<% if @security != "NONE" -%>
+  security             = <%= @security %>
 <% end -%>
-<% if server_string != "NONE" -%>
-  server string        = <%= server_string %>
+<% if @server_string != "NONE" -%>
+  server string        = <%= @server_string %>
 <% end -%>
-<% if socket_options != "NONE" -%>
-  socket options       = <%= [socket_options].flatten.join(" ")  %>
+<% if @socket_options != "NONE" -%>
+  socket options       = <%= [@socket_options].flatten.join(" ")  %>
 <% end -%>
-<% if syslog != "NONE" -%>
-  syslog               = <%= syslog %>
+<% if @syslog != "NONE" -%>
+  syslog               = <%= @syslog %>
 <% end -%>
-<% if unix_extensions != "NONE" -%>
-  unix extensions      = <%= unix_extensions %>
+<% if @unix_extensions != "NONE" -%>
+  unix extensions      = <%= @unix_extensions %>
 <% end -%>
-<% if wide_links != "NONE" -%>
-  wide links           = <%= wide_links %>
+<% if @wide_links != "NONE" -%>
+  wide links           = <%= @wide_links %>
 <% end -%>
-<% if wins_server != "NONE" -%>
-  wins server          = <%= [wins_server].flatten.join(" ") %>
+<% if @wins_server != "NONE" -%>
+  wins server          = <%= [@wins_server].flatten.join(" ") %>
 <% end -%>
-<% if workgroup != "NONE" -%>
-  workgroup            = <%= workgroup %>
+<% if @workgroup != "NONE" -%>
+  workgroup            = <%= @workgroup %>
 <% end -%>
-<% if panic_action != "NONE" -%>
-  panic action         = "<%= panic_action %>"
+<% if @panic_action != "NONE" -%>
+  panic action         = "<%= @panic_action %>"
 <% end -%>
-<% if strict_locking != "NONE" -%>
-  strict locking       = <%= strict_locking %>
+<% if @strict_locking != "NONE" -%>
+  strict locking       = <%= @strict_locking %>
 <% end -%>
 
 
