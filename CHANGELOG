@@ -1,0 +1,42 @@
+0.0.5 - pdxcat/samba - 2013/09/02
+
+ec5f5a0 Merge pull request #4 from pdxcat/187_fix
+981a431 making the world safe for older rubies
+1a9567e Merge pull request #3 from blkperl/fix_failing_spec_tests
+452bff3 Fix failing spec tests
+95b4c44 Merge pull request #2 from finchd/fix_concat
+55e0d70 Update dependency to puppetlabs/concat
+144eefa Merge pull request #1 from PokaDot/add_color
+46c075a Add syntax highlighting to README
+a4a97eb Update templates to be puppet 3.2.1 warning free
+fc03ae8 Fix typo in samba module.
+
+0.0.4 - pdxcat/samba - 2013/10/15
+
+14d511e Fix typo in modulefile concat dependency
+
+0.0.3 - pdxcat/samba - 2012/10/15
+
+c49370a Forge Release: Version 0.0.3
+743582a Add solaris support
+dd4d967 Removed "" from strict_locking
+f22a8ae strict locking has no underscore
+8f207a4 Support for strict locking
+c1a1e5d Add force_user, guest_ok, and guest_only params
+1cfb891 Order samba parameters alphabetical
+c4a050a Add browseable and force create mode params
+164a232 Typo in share.erb
+99ae955 Added package resource. debian only for now
+fecddb5 Adding travis-ci badge to readme
+8977501 Adding gitignore
+bab01fb Trying to gain dexterity with rspec tests
+dfabfb4 Added templates and manifests for samba::share and samba::dfsroot
+09f4d8e Added more boiler plate for travis cs integration
+8b22322 Added Spencer Krum to license and puppet lint'd
+268c988 Acutal modulefile from the style guide
+d1dd84c Puppet lint all the things
+8da8b02 Added spec scaffolding
+e0ffe60 Cleaned up README, made example config
+fdd3c4c samba::global now only includes user specefied options
+6bc8b1e I mean really
+14694b5 Basic Functionality Inboud

@@ -1,5 +1,5 @@
 name 'puppet-module-samba'
-version '0.0.4'
+version '0.0.5'
 author 'Spencer Krum'
 summary 'Configure samba global paramaters and shares'
 description 'Manage samba global configuration and shares as individual resources'
