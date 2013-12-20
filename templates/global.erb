@@ -15,7 +15,7 @@
   host msdfs           = <%= @host_msdfs %>
 <% end -%>
 <% if @hosts_allow != "NONE" -%>
-  hosts allow          = <%= @hosts_allow %>
+  hosts allow          = <%= [@hosts_allow].flatten.join(" ") %>
 <% end -%>
 <% if @idmap_gid != "NONE" -%>
   idmap gid            = <%= @idmap_gid %>
