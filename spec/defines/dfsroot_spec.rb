@@ -13,7 +13,7 @@ describe 'samba::dfsroot', :type => :define do
     'testing'
   end
 
-  it { should include_class('samba') }
+  it { should contain_class('samba') }
 
   it { should contain_concat__fragment('testing').with(
       'ensure' => 'present',
