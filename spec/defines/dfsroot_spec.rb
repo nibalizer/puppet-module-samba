@@ -1,16 +1,23 @@
-require 'rspec-puppet'
+require 'spec_helper'
 
-describe 'samba::dfsroot' do
-  #tests go here
-  let(:title) {'testing'}
+describe 'samba::dfsroot', :type => :define do
 
-  it { should include_class('samba') }
+  let :facts do
+    {
+    :concat_basedir => '/dne',
+    :osfamily       => 'Debian',
+    }
+  end
 
-  it do
-    should contain_concat__fragment('testing').with({
+  let :title do
+    'testing'
+  end
+
+  it { should contain_class('samba') }
+
+  it { should contain_concat__fragment('testing').with(
       'ensure' => 'present',
       'target' => '/etc/samba/smb.conf',
-      'order'  => '20',
-    })
-  end
+      'order'  => '20'
+  )}
 end

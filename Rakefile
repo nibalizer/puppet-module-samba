@@ -1,14 +1,2 @@
-# Most of this taken from Tim Sharpe's blog
-# http://bombasticmonkey.com/
-require 'rake'
-
-# puppet lint ALL the things!
-require 'puppet-lint/tasks/puppet-lint'
-
-require 'rspec/core/rake_task'
-
-RSpec::Core::RakeTask.new(:spec) do |t|
-  t.pattern = 'spec/*/*_spec.rb'
-end
-
-task :default => [:spec, :lint]
+require 'puppetlabs_spec_helper/rake_tasks'
+require 'rspec-system/rake_task'

@@ -1,10 +1,8 @@
 class samba(
   $smb_conf_filename    = $samba::params::smb_conf_filename,
 ) inherits samba::params {
-  include concat::setup
-  include samba::params
 
-  package { $samba::parmas::smbpackage:
+  package { $samba::params::smbpackage:
     name     => $samba::params::smbpackage,
     ensure   => latest,
     provider => $osfamily ? {
