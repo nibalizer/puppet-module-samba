@@ -1,7 +1,6 @@
 class samba(
   $smb_conf_filename    = $samba::params::smb_conf_filename,
 ) inherits samba::params {
-  include samba::params
 
   package { $samba::params::smbpackage:
     name     => $samba::params::smbpackage,
